@@ -1,0 +1,44 @@
+.filter-options {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.search-icon-container {
+  position: absolute;
+  padding-top: 7.5px;
+  padding-left: 7.5px;
+}
+
+input {
+  border: 0;
+  border-radius: 2.5px;
+  padding: 10px 40px;
+  width: 400px;
+}
+
+input, select {
+  background-color: var(--elements);
+  color: var(--text-color);
+}
+
+@media (max-width: 468px) {
+  .filter-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input, select {
+    width: 90vw;
+    margin-bottom: 20px;
+  }
+
+  select {
+    width: 50%;
+    padding: 10px;
+    margin-left: 5px;
+    align-self: flex-start;
+  }
+}

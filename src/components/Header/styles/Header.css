@@ -1,0 +1,32 @@
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background-color: var(--elements);
+  transition: top .333s ease;
+  z-index: 1000;
+}
+
+header.hide {
+  top: -53px;
+}
+
+.app-title {
+  cursor: pointer;
+}
+
+.theme-toggle span {
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+@media (max-width: 468px) {
+  header {
+    font-size: .7em;
+    padding: 10px 20px;
+    height: 52px;
+  }
+}
