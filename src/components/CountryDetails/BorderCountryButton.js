@@ -4,12 +4,14 @@ import axios from "axios";
 const BorderCountryButton = ({ countryCode, setSelectedCountry }) => {
   const [countryName, setCountryName] = useState("");
 
-  useEffect(async () => {
-    const { data } = await axios.get(
-      `https://restcountries.com/v2/alpha/${countryCode}`
-    );
+  useEffect(() => {
+    async function setData() {
+      await axios
+        .get(`https://restcountries.com/v2/alpha/${countryCode}`)
+        .then(({ data }) => setCountryName(data.name));
+    }
 
-    setCountryName(data.name);
+    setData();
   }, [countryCode]);
 
   return (
