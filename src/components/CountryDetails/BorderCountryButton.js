@@ -10,7 +10,7 @@ const BorderCountryButton = ({ countryCode, setSelectedCountry }) => {
     );
 
     setCountryName(data.name);
-  });
+  }, [countryCode]);
 
   return (
     <div className='border-country-button-container'>
