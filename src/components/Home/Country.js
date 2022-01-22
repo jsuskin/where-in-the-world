@@ -8,7 +8,11 @@ const Country = ({ country, setSelectedCountry }) => {
         onClick={() => setSelectedCountry(country.cca3 || country.alpha3Code)}
       >
         <div className='country-card-flag-image-container'>
-          <img className='country-card-flag-image' src={country.flags.png} />
+          <img
+            className='country-card-flag-image'
+            src={country.flags.png}
+            alt={`Official flag of ${country.name.common || country.name}`}
+          />
         </div>
         <div className='country-card-info'>
           <h3>{country.name.common || country.name}</h3>

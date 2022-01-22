@@ -26,7 +26,7 @@ const CountryDetails = ({ countryCode, setSelectedCountry }) => {
           </button>
           <div className='country-details'>
             <div className='country-flag-image-container'>
-              <img src={country.flags.svg} />
+              <img src={country.flags.svg} alt={`Official flag of ${country.name}`} />
             </div>
             <div className='country-info'>
               <div className='country-name'>
